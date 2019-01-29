@@ -1,0 +1,19 @@
+.hero-container {
+  height: 60vh;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fa-shoe-prints {
+  font-size: 3em;
+  margin: 30px auto;
+}
+
+.card-1 {
+  width: 18rem;
+  background-color: transparent;
+  border: none;
+}
