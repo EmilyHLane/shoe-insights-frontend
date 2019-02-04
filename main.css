@@ -1,5 +1,11 @@
-.hero-container {
-  height: 60vh;
+.vh-90 {
+  height: 90vh;
+}
+
+.hero-image {
+  background-image: url(/images/hero.jpg);
+  background-size: cover;
+  background-position: bottom;
 }
 
 .flex-space-even {
@@ -9,6 +15,10 @@
 
 .dark-red-text {
   color: #730212;
+}
+
+.font-bolder {
+  font-weight: bolder;
 }
 
 .icon-size-margin {
@@ -25,7 +35,7 @@
 .btn-primary {
   color: #730212;
   background-color: white;
-  border-color: rgb(134, 134, 134);
+  border-color: rgb(95, 95, 95);
 }
 
 .btn-primary:hover {

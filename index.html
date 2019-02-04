@@ -14,22 +14,22 @@
     <link rel="stylesheet" type="text/css" href="main.css"></link>
     <title>Shoe Insights</title>
   </head>
+
   <body>
-      <a href="#main">Skip to main content</a>
-      <header>
-          <h1>Shoe Insights</h1>
-          <nav>
-              <a href="#about">About</a>
-              <a href="#find-shoes">Find Shoes</a>
-          </nav>
-      </header>
-
-    <main id="main" class="jumbotron jumbotron-fluid">
-        <section class="container hero-container">
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corporis. Quis obcaecati placeat nisi officia velit, ad praesentium. </p>
-        </section>
-
-        <section class="container about-container">
+    <a href="#intro">Skip navigation</a>
+    <div class="jumbotron jumbotron-fluid hero-image vh-90">
+            <header>
+                <h1>Shoe Insights</h1>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#find-shoes">Find Shoes</a>
+                </nav>
+            </header>
+            <p id="intro" class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corporis. Quis obcaecati placeat nisi officia velit, ad praesentium.</p>
+    </div>   
+    
+    <main>
+        <section class="container about-container vh-90">
 
             <section id="about" class="flex-space-even">
                 <article class="card card-1" style="width: 18rem;">
@@ -51,23 +51,26 @@
                 <article class="card card-3" style="width: 18rem;">
                     <i class="fas fa-heart icon-size-margin dark-red-text"></i>
                     <div class="card-body">
-                        <h2 class="card-title">Find Shoes</h2>
+                        <h2 class="card-title">Try it</h2>
                         <p class="card-text">Some quick description of how to use shoe insights. Encourage user to try it out.</p>
-                        <a href="#find-shoes" class="btn btn-primary">Start</a>
+                        <a href="#find-shoes" class="btn btn-primary font-bolder">Start</a>
                     </div>
                 </article>
             </section>
 
         </section>
 
-        <section id="find-shoes" class="container find-shoe-container">
-            <h1 class="display-4">Find Shoes</h1>
-
-          
-                  
-                  
+        <section id="find-shoes" class="container find-shoe-container vh-90">
+            <h2 class="display-4">Find Shoes</h2>
+            <h3>Step 1: Select the image that best matches your foot shape</h3>
+            <img id="foot-shape-1" class="foot-image-size" src="images/type1.png" alt="describe foot shape 1">
+            <img id="foot-shape-2" class="foot-image-size" src="images/type2.png" alt="describe foot shape 2">
+            <img id="foot-shape-3" class="foot-image-size" src="images/type3.png" alt="describe foot shape 3">
+            <a href="">Next: Select blah</a>
+    
         </section>
     </main>
+
       
 
 
