@@ -1,11 +1,26 @@
+/* --------------- */
+/* utility classes */
+/* --------------- */
+
 .vh-90 {
   height: 90vh;
 }
 
-.hero-image {
-  background-image: url(/images/hero.jpg);
-  background-size: cover;
-  background-position: bottom;
+.width-70p {
+  width: 70%;
+}
+
+.margin-5p-auto {
+  margin: 5% auto;
+}
+
+.pad-right-20px {
+  padding-right: 20px;
+}
+
+.flex-space-btwn {
+  display: flex;
+  justify-content: space-between;
 }
 
 .flex-space-even {
@@ -17,10 +32,42 @@
   color: #730212;
 }
 
+.white-text {
+  color: white;
+}
+
 .font-bolder {
   font-weight: bolder;
 }
 
+.font-w-200 {
+  font-weight: 200;
+}
+
+.font-1dot5em {
+  font-size: 1.5em;
+}
+
+.font-3em {
+  font-size: 3em;
+}
+
+/* ----------------- */
+/* component classes */
+/* ----------------- */
+
+/* nav and hero */
+h1 {
+  line-height: 36px;
+}
+
+.hero-image {
+  background-image: url(/images/cropHero.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* about section */
 .icon-size-margin {
   font-size: 3em;
   margin: 30px auto;
@@ -42,4 +89,15 @@
   color: white;
   background-color: #730212;
   border-color: rgb(95, 95, 95);
+}
+
+/* find shoes section */
+
+/* -------------------------------- */
+/* override bootstrap media queries */
+/* -------------------------------- */
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 1rem 2rem;
+  }
 }
