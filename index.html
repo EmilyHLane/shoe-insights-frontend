@@ -15,46 +15,59 @@
     <title>Shoe Insights</title>
   </head>
   <body>
+      <a href="#main">Skip to main content</a>
+      <header>
+          <h1>Shoe Insights</h1>
+          <nav>
+              <a href="#about">About</a>
+              <a href="#find-shoes">Find Shoes</a>
+          </nav>
+      </header>
 
-    <div class="jumbotron jumbotron-fluid">
+    <main id="main" class="jumbotron jumbotron-fluid">
         <section class="container hero-container">
-            <h1 class="display-4">Shoe Insights</h1>
-            <p class="lead">Using machine learning to find shoes that fit.</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corporis. Quis obcaecati placeat nisi officia velit, ad praesentium. </p>
         </section>
 
         <section class="container about-container">
-            <h1 class="display-4">About</h1>
 
-            <section class="about-cards">
-                <div class="card card-1" style="width: 18rem;">
-                   <i class="fas fa-shoe-prints"></i> 
+            <section id="about" class="flex-space-even">
+                <article class="card card-1" style="width: 18rem;">
+                   <i class="fas fa-shoe-prints icon-size-margin dark-red-text"></i> 
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h2 class="card-title">Foot shapes</h2>
+                        <p class="card-text">Some explanation of foot types and reason why shoes won't fit/will fit.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="http://via.placeholder.com/240x160" alt="Card image cap">
+                <article class="card card-2" style="width: 18rem;">
+                    <i class="fas fa-flask icon-size-margin dark-red-text"></i>
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h2 class="card-title">Shoe Insights</h2>
+                        <p class="card-text">Some quick explanation of how shoe insights works, machine learning, etc.</p>
                     </div>
-                </div>
+                </article>
+
+                <article class="card card-3" style="width: 18rem;">
+                    <i class="fas fa-heart icon-size-margin dark-red-text"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Find Shoes</h2>
+                        <p class="card-text">Some quick description of how to use shoe insights. Encourage user to try it out.</p>
+                        <a href="#find-shoes" class="btn btn-primary">Start</a>
+                    </div>
+                </article>
             </section>
 
         </section>
 
-        <section class="container find-shoe-container">
+        <section id="find-shoes" class="container find-shoe-container">
             <h1 class="display-4">Find Shoes</h1>
 
           
                   
                   
         </section>
-    </div>
+    </main>
       
 
 

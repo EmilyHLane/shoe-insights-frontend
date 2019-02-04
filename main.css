@@ -2,18 +2,34 @@
   height: 60vh;
 }
 
-.about-cards {
+.flex-space-even {
   display: flex;
   justify-content: space-evenly;
 }
 
-.fa-shoe-prints {
+.dark-red-text {
+  color: #730212;
+}
+
+.icon-size-margin {
   font-size: 3em;
   margin: 30px auto;
 }
 
-.card-1 {
+.card {
   width: 18rem;
   background-color: transparent;
   border: none;
+}
+
+.btn-primary {
+  color: #730212;
+  background-color: white;
+  border-color: rgb(134, 134, 134);
+}
+
+.btn-primary:hover {
+  color: white;
+  background-color: #730212;
+  border-color: rgb(95, 95, 95);
 }

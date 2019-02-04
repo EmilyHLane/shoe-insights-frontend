@@ -29,9 +29,11 @@ Single-page web app to help users find shoes that fit, by matching their foot sh
 ### Emily Lane
 
 Full-Stack Web Developer
-[LinkedIn](https://www.linkedin.com/in/emilylindborglane/)
+
+- [LinkedIn](https://www.linkedin.com/in/emilylindborglane/)
 
 ### Li Zhong
 
 Data Scientist
-[LinkedIn](https://www.linkedin.com/in/li-zhong/)
+
+- [LinkedIn](https://www.linkedin.com/in/li-zhong/)
