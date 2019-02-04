@@ -10,12 +10,36 @@
   width: 70%;
 }
 
+.height-100p {
+  height: 100%;
+}
+
+.margin-0-auto {
+  margin: 0 auto;
+}
+
 .margin-5p-auto {
   margin: 5% auto;
 }
 
+.margin-top-50px {
+  margin-top: 50px;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
 .pad-right-20px {
   padding-right: 20px;
+}
+
+.pad-top-60px {
+  padding-top: 60px;
+}
+
+.pad-bottom-60px {
+  padding-bottom: 60px;
 }
 
 .flex-space-btwn {
@@ -26,6 +50,27 @@
 .flex-space-even {
   display: flex;
   justify-content: space-evenly;
+}
+
+.flex-column-override {
+  display: flex;
+  flex-direction: column;
+}
+
+.red-border {
+  border: 2px solid #730212;
+}
+
+.bgc-red {
+  background-color: #730212;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
 }
 
 .dark-red-text {
@@ -108,7 +153,30 @@ h1 {
   border-color: rgb(95, 95, 95);
 }
 
+.section-divider {
+  width: 100%;
+  border-bottom: 1px solid #730212;
+}
+
 /* find shoes section */
+
+.finder-header {
+  padding: 30px 30px 10px;
+}
+
+.step-container {
+  margin: 30px auto 50px;
+}
+
+.foot-image-size {
+  width: 100%;
+}
+
+.foot-button {
+  width: 30%;
+  border: none;
+  padding: 0;
+}
 
 /* -------------------------------- */
 /* override bootstrap media queries */

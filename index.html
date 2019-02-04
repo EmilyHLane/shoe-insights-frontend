@@ -17,7 +17,7 @@
 
   <body>
     <a href="#intro" class="skip-nav">Skip navigation</a>
-    <div class="jumbotron jumbotron-fluid hero-image vh-90">
+    <div class="jumbotron jumbotron-fluid hero-image vh-90 margin-bottom-0">
             <header class="flex-space-btwn">
                 <h1 class="font-1dot5em white-text line-height-36px font-w-200">Shoe Insights</h1>
                 <nav>
@@ -28,15 +28,13 @@
             <p id="intro" class="lead white-text font-3em width-70p margin-5p-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corporis. Quis obcaecati placeat nisi officia velit, ad praesentium.</p>
     </div>   
     
-    <main>
-        <section class="container about-container vh-90">
-
-            <section id="about" class="flex-space-even">
+    <main class="red-border">
+        <section  id="about" class="container flex-space-even vh-90 pad-top-60px">
                 <article class="card card-1" style="width: 18rem;">
                    <i class="fas fa-shoe-prints icon-size-margin dark-red-text"></i> 
                     <div class="card-body">
                         <h2 class="card-title">Foot shapes</h2>
-                        <p class="card-text">Some explanation of foot types and reason why shoes won't fit/will fit.</p>
+                        <p class="card-text">Some explanation of foot types and reason why shoes won't fit/will fit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </article>
 
@@ -44,7 +42,7 @@
                     <i class="fas fa-flask icon-size-margin dark-red-text"></i>
                     <div class="card-body">
                         <h2 class="card-title">Shoe Insights</h2>
-                        <p class="card-text">Some quick explanation of how shoe insights works, machine learning, etc.</p>
+                        <p class="card-text">Some quick explanation of how shoe insights works, machine learning, etc. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </article>
 
@@ -52,24 +50,33 @@
                     <i class="fas fa-heart icon-size-margin dark-red-text"></i>
                     <div class="card-body">
                         <h2 class="card-title">Try it</h2>
-                        <p class="card-text">Some quick description of how to use shoe insights. Encourage user to try it out.</p>
+                        <p class="card-text">Some quick description of how to use shoe insights. Encourage user to try it out. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <a href="#find-shoes" class="btn btn-primary font-bolder">Start</a>
                     </div>
                 </article>
-            </section>
-
         </section>
-
-        <section id="find-shoes" class="container find-shoe-container vh-90">
-            <h2 class="display-4">Find Shoes</h2>
-            <h3>Step 1: Select the image that best matches your foot shape</h3>
-            <img id="foot-shape-1" class="foot-image-size" src="images/type1.png" alt="describe foot shape 1">
-            <img id="foot-shape-2" class="foot-image-size" src="images/type2.png" alt="describe foot shape 2">
-            <img id="foot-shape-3" class="foot-image-size" src="images/type3.png" alt="describe foot shape 3">
-            <a href="">Next: Select blah</a>
-    
+<div class="section-divider"></div>
+        <section id="find-shoes">
+            <h2 class="font-1dot5em bgc-red white-text font-w-200 finder-header">Find Shoes</h2>
+            <div class="container find-shoe-container vh-90 pad-top-60px pad-bottom-60px flex-column-override">
+                <h3 class="margin-0-auto width-70p">Step 1: Select the image that best matches your foot shape</h3>
+                <p class="margin-0-auto width-70p">(This step is required.)</p>
+                <div class="step-container flex-space-even width-70p">
+                    <button class="foot-button">
+                        <img id="foot-shape-1" class="foot-image-size" src="images/type1.png" alt="describe foot shape 1"></button>
+                    <button class="foot-button">
+                        <img id="foot-shape-2" class="foot-image-size" src="images/type2.png" alt="describe foot shape 2">
+                    </button>
+                    <button class="foot-button">
+                        <img id="foot-shape-3" class="foot-image-size" src="images/type3.png" alt="describe foot shape 3">
+                    </button>
+                </div>
+                <a href="#" class="text-end font-1dot5em">Step 2: Shoe size</a>
+            </div> 
         </section>
     </main>
+
+    <footer class="pad-top-60px bgc-red white-text"><p class="margin-bottom-0 pad-bottom-60px text-center">add some footer content here</p></footer>
 
       
 
