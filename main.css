@@ -1,6 +1,6 @@
-/* --------------- */
-/* utility classes */
-/* --------------- */
+/* ----------------------------- */
+/*        utility classes        */
+/* ----------------------------- */
 .block {
   display: block;
 }
@@ -67,6 +67,12 @@
   justify-content: space-evenly;
 }
 
+.flex-self-right {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
 .flex-column-override {
   display: flex;
   flex-direction: column;
@@ -116,11 +122,15 @@
   font-size: 3em;
 }
 
-/* ----------------- */
-/* component classes */
-/* ----------------- */
+/* ------------------------------- */
+/*        component classes        */
+/* ------------------------------- */
 
 /* nav and hero */
+.jumbotron {
+  padding: 1rem 2rem;
+}
+
 .skip-nav {
   padding-left: 32px;
   font-size: 1.5em;
@@ -194,10 +204,11 @@ h1 {
 }
 
 /* -------------------------------- */
-/* override bootstrap media queries */
+/*         media queries            */
 /* -------------------------------- */
-@media (min-width: 576px) {
-  .jumbotron {
-    padding: 1rem 2rem;
+
+@media (max-width: 991px) {
+  .vh-40 {
+    height: calc(40vh - 10vh);
   }
 }
