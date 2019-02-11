@@ -56,34 +56,50 @@
                 </article>
         </section>
 <div class="section-divider"></div>
-        <section id="find-shoes">
-            <h2 class="font-1dot5em bgc-red white-text font-w-200 finder-header">Find Shoes</h2>
-            <div class="container find-shoe-container vh-90 pad-top-60px pad-bottom-60px flex-column-override">
-                <h3 class="margin-0-auto width-70p">Step 1: Select the image that best matches your foot shape</h3>
-                <p class="margin-0-auto width-70p">(This step is required.)</p>
-                <div class="step-container flex-space-even width-70p">
-                    <button class="foot-button">
-                        <img id="foot-shape-1" class="foot-image-size" src="images/type1.png" alt="describe foot shape 1"></button>
-                    <button class="foot-button">
-                        <img id="foot-shape-2" class="foot-image-size" src="images/type2.png" alt="describe foot shape 2">
-                    </button>
-                    <button class="foot-button">
-                        <img id="foot-shape-3" class="foot-image-size" src="images/type3.png" alt="describe foot shape 3">
-                    </button>
+        <section id="find-shoes" class="vh-100">
+            <h2 class="font-1dot5em bgc-red white-text font-w-200 finder-header margin-bottom-0">Find Shoes</h2>
+            <div class="container find-shoe-container pad-top-60px pad-bottom-60px flex-column-override">
+
+                <div class="q1-foot-type flex-column-override">
+                        <h3 class="margin-0-auto width-70p">Step 1: Select the image that best matches your foot shape</h3>
+                        <p class="margin-0-auto width-70p">(This step is required.)</p>
+                        <div class="step-container flex-space-even width-70p">
+                            <button class="foot-button" data-foot-shape-id="1">
+                                <img id="foot-shape-1" class="vh-40" src="images/type1.png" alt="describe foot shape 1"></button>
+                            <button class="foot-button" data-foot-shape-id="2">
+                                <img id="foot-shape-2" class="vh-40" src="images/type2.png" alt="describe foot shape 2">
+                            </button>
+                            <button class="foot-button" data-foot-shape-id="3">
+                                <img id="foot-shape-3" class="vh-40" src="images/type3.png" alt="describe foot shape 3">
+                            </button>
+                        </div>
+                        <button href="#" class="text-end font-1dot5em" id="search">Step 2: Shoe size</button>
                 </div>
-                <a href="#" class="text-end font-1dot5em">Step 2: Shoe size</a>
+
+                <div class="q2-shoe-size hide">
+                        <h3 class="margin-0-auto width-70p">Step 2: Select your shoe size and width.</h3>
+                        <p class="margin-0-auto width-70p">(This step is required.)</p>
+                        <div class="step-container flex-space-even width-70p">
+                            <p>sizes here</p>
+                        </div>
+                        <a href="#" class="text-end font-1dot5em">Step 3: Shoe style</a>
+                </div>
+
             </div> 
+         
         </section>
     </main>
 
     <footer class="pad-top-60px bgc-red white-text"><p class="margin-bottom-0 pad-bottom-60px text-center">add some footer content here</p></footer>
 
-      
 
+    <!-- jQuery CDN -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 
-      <!-- jquery CDN -->
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <!-- bootstrap CDN -->
+     <!-- bootstrap CDN -->
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="main.js"></script>
   </body>
