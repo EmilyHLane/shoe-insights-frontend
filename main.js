@@ -33,44 +33,108 @@ function getFootShape() {
 }
 $(".foot-button").click(getFootShape);
 
+// get shoe size gender and value
+// TODO: add mens and width
+function getShoeGender() {
+  gender = $(this)
+    .html()
+    .toLowerCase();
+  console.log(gender);
+}
+
+function getShoeSize() {
+  womensSize = $(this).html();
+
+  console.log(womensSize);
+}
+
+$(".shoe-gender").click(getShoeGender);
+$(".shoe-size-button").click(getShoeSize);
+
+// get shoe style
+function getShoeStyle() {
+  //code here
+}
+
+//click event here
+
 ///////////////////////////////////////////////////////////////////
 // 2. when user selects next Q, hide current div and show next div
 
 // error msg for required questions
-function stepError() {
-  //error message display
-  console.log("error msg: please make a selection");
+function stepError(qId) {
+  if (qId === 1) {
+    $(".q1-not-selected")
+      .removeClass("hide")
+      .addClass("block");
+  }
+  if (qId === 2) {
+    console.log("cool");
+    $(".q2-not-selected")
+      .removeClass("hide")
+      .addClass("block");
+  }
+  if (qId === 3) {
+    $(".q3-not-selected")
+      .removeClass("hide")
+      .addClass("block");
+  }
 }
 
 // Q1 required
 function goQ2() {
   if (footShape != null) {
-    // hide step 1, show step 2 q1-foot-shape, q2-shoe-size
-    $(".q1-foot-shape").removeClass("flex-column-override");
-    $(".q1-foot-shape").addClass("hide");
-    $(".q2-shoe-size").removeClass("hide");
-    $(".q2-shoe-size").addClass("flex-column-override");
+    // hide step 1, show step
+    $(".q1-foot-shape")
+      .removeClass("flex-column-override")
+      .addClass("hide");
+    $(".q2-shoe-size")
+      .removeClass("hide")
+      .addClass("flex-column-override");
   } else {
-    stepError();
+    let qId = $(this).data("q-id");
+    stepError(qId);
   }
 }
 
 $(".btn-step-2").click(goQ2);
 
 // Q2 required
+//TODO: add men's size to data model and request body, account for multiple size selections
 function goQ3() {
-  if (footShape != null) {
-    // hide step 1, show step 2 q1-foot-shape, q2-shoe-size
-    $(".q2-foot-shape").removeClass("flex-column-override");
-    $(".q2-foot-shape").addClass("hide");
-    $(".q3-shoe-size").removeClass("hide");
-    $(".q3-shoe-size").addClass("flex-column-override");
+  if (womensSize != null) {
+    // hide step 2, show step 3
+    $(".q2-shoe-size")
+      .removeClass("flex-column-override")
+      .addClass("hide");
+    $(".q3-shoe-style")
+      .removeClass("hide")
+      .addClass("flex-column-override");
   } else {
-    stepError();
+    let qId = $(this).data("q-id");
+    console.log(qId);
+    stepError(qId);
   }
 }
 
 $(".btn-step-3").click(goQ3);
+
+// Q3 one select required
+function goQ4() {
+  if (category != "") {
+    // hide step 2, show step 3
+    $(".q3-shoe-style")
+      .removeClass("flex-column-override")
+      .addClass("hide");
+    $(".q4-more")
+      .removeClass("hide")
+      .addClass("flex-column-override");
+  } else {
+    let qId = $(this).data("q-id");
+    console.log(qId);
+    stepError(qId);
+  }
+}
 
 //////////////////////////////////
 // 3. when done, send to database
@@ -78,23 +142,27 @@ $(".btn-step-3").click(goQ3);
 const baseURL = "https://shoe-insights-backend.herokuapp.com/api/shoe";
 
 function submitSearch() {
-  console.log("ok");
-  console.log(footShape);
+  console.log("submitted");
+  console.log(footShape, gender, womensSize);
   $.post(baseURL, {
-    footShape
-    //   gender,
-    //   womensSize,
+    footShape,
+    //-----------------
+    gender,
+    womensSize
     //   womensWidth,
+    //-----------------
     //   category,
     //   subCategory,
-    //   brand,
-    //   price,
     //   color,
     //   bootShaft,
     //   heelHeight,
     //   heelStyle,
     //   toeStyle,
     //   occasion,
+    //------------------
+    //   brand,
+    //   price,
+    //------------------
     //   materials,
     //   features,
     //   performance,
@@ -102,4 +170,4 @@ function submitSearch() {
   }).done(console.log("added to db"));
 }
 
-$("#search").click(submitSearch);
+$(".btn-done").click(submitSearch);

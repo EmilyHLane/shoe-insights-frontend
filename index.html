@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
     <!-- fontawesome stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
     <!-- bootstrap stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- main stylesheet -->
@@ -55,34 +53,90 @@
                     </div>
                 </article>
         </section>
-<div class="section-divider"></div>
+        <div class="section-divider"></div>
         <section id="find-shoes" class="vh-100">
-            <h2 class="font-1dot5em bgc-red white-text font-w-200 finder-header margin-bottom-0">Find Shoes</h2>
+            <h2 class="font-1dot5em bgc-red white-text font-w-200 finder-header margin-bottom-0 text-center">Find shoes that fit</h2>
             <div class="container find-shoe-container pad-top-60px pad-bottom-60px flex-column-override">
 
                 <div class="q1-foot-shape flex-column-override">
                         <h3 class="margin-0-auto width-70p">Step 1: Select the image that best matches your foot shape</h3>
                         <p class="margin-0-auto width-70p">(This step is required.)</p>
                         <div class="step-container flex-space-even width-70p">
-                            <button class="foot-button" data-foot-shape-id="1">
+                            <button class="foot-button btn" data-foot-shape-id="1">
                                 <img id="foot-shape-1" class="vh-40" src="images/type1.png" alt="describe foot shape 1"></button>
-                            <button class="foot-button" data-foot-shape-id="2">
+                            <button class="foot-button btn" data-foot-shape-id="2">
                                 <img id="foot-shape-2" class="vh-40" src="images/type2.png" alt="describe foot shape 2">
                             </button>
-                            <button class="foot-button" data-foot-shape-id="3">
+                            <button class="foot-button btn" data-foot-shape-id="3">
                                 <img id="foot-shape-3" class="vh-40" src="images/type3.png" alt="describe foot shape 3">
                             </button>
                         </div>
-                        <button class="flex-self-right btn btn-primary font-bolder btn-step-2">Step 2: Shoe size</button>
+                        <p class="q1-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a foot shape.</p>
+                        <button data-q-id="1" class="flex-self-right btn btn-primary font-bolder btn-step-2">Next: Shoe size</button>
                 </div>
 
                 <div class="q2-shoe-size hide">
                         <h3 class="margin-0-auto width-70p">Step 2: Select your shoe size and width.</h3>
                         <p class="margin-0-auto width-70p">(This step is required.)</p>
                         <div class="step-container flex-space-even width-70p">
-                            <p>sizes here</p>
+                            <section class="gender">
+                                <button class="shoe-gender">Men</button>
+                                <button class="shoe-gender">Women</button>
+                                <button class="shoe-gender">Width</button>
+                            </section>
+                            <section class="size-buttons">
+                                <button class="shoe-size-button">4.5</button>
+                                <button class="shoe-size-button">4</button>
+                                <button class="shoe-size-button">5</button>
+                                <button class="shoe-size-button">5.5</button>
+                                <button class="shoe-size-button">6</button>
+                                <button class="shoe-size-button">6.5</button>
+                                <button class="shoe-size-button">7</button>
+                                <button class="shoe-size-button">7.5</button>
+                                <button class="shoe-size-button">8</button>
+                                <button class="shoe-size-button">8.5</button>
+                                <button class="shoe-size-button">9</button>
+                                <button class="shoe-size-button">9.5</button>
+                                <button class="shoe-size-button">10</button>
+                                <button class="shoe-size-button">10.5</button>
+                                <button class="shoe-size-button">11</button>
+                                <button class="shoe-size-button">11.5</button>
+                                <button class="shoe-size-button">12</button>
+                                <button class="shoe-size-button">12.5</button>
+                                <button class="shoe-size-button">13</button>
+                                <button class="shoe-size-button">13.5</button>
+                                <button class="shoe-size-button">14</button>
+                                <button class="shoe-size-button">14.5</button>
+                                <button class="shoe-size-button">15</button>
+                                <button class="shoe-size-button">15.5</button>
+                                <button class="shoe-size-button">16</button>
+                                <button class="shoe-size-button">16.5</button>
+                                <button class="shoe-size-button">17</button>
+                                <button class="shoe-size-button">17.5</button>
+                                <button class="shoe-size-button">18</button>
+                                <button class="shoe-size-button">19</button>
+                            </section>
+
                         </div>
-                        <a href="#" class="text-end font-1dot5em">Step 3: Shoe style</a>
+                        <p class="q2-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a shoe size.</p>
+                        <button data-q-id="2"class="flex-self-right btn btn-primary font-bolder btn-step-3">Next: Shoe style</button>
+                </div>
+
+                <div class="q3-shoe-style hide">
+                    <h3 class="margin-0-auto width-70p">Step 3: Select a shoe style.</h3>
+                    <p class="margin-0-auto width-70p">(At least one selection is required.)</p>
+                    <h1>add style selections here</h1>
+                    <p class="q3-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a style.</p>
+                    <button data-q-id="3" class="flex-self-right btn btn-primary font-bolder btn-step-4">Next: Brand and price</button>
+                    <button class="btn-done text-center width-100p margin-top-50px btn btn-primary font-bolder">Done</button>
+                </div>
+
+                <div class="q4-more hide">
+                    <h3 class="margin-0-auto width-70p">Step 4: Select additional filters</h3>
+                    <h1>add filter selections here</h1>
+                    <p class="q4-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a style.</p>
+                    <button data-q-id="4" class="flex-self-right btn btn-primary font-bolder btn-step-5">Next: xxxxx</button>
+                    <button class="btn-done text-center width-100p margin-top-50px btn btn-primary font-bolder">Done</button>
                 </div>
 
             </div> 
