@@ -6,6 +6,7 @@
 
 //////////////////////////
 // 1. capture selections
+//////////////////////////
 
 // selection variables
 let footShape = null;
@@ -39,13 +40,10 @@ function getShoeGender() {
   gender = $(this)
     .html()
     .toLowerCase();
-  console.log(gender);
 }
 
 function getShoeSize() {
   womensSize = $(this).html();
-
-  console.log(womensSize);
 }
 
 $(".shoe-gender").click(getShoeGender);
@@ -59,7 +57,8 @@ function getShoeStyle() {
 //click event here
 
 ///////////////////////////////////////////////////////////////////
-// 2. when user selects next Q, hide current div and show next div
+// 2. when user selects next, hide current div and show next div
+///////////////////////////////////////////////////////////////////
 
 // error msg for required questions
 function stepError(qId) {
@@ -69,7 +68,6 @@ function stepError(qId) {
       .addClass("block");
   }
   if (qId === 2) {
-    console.log("cool");
     $(".q2-not-selected")
       .removeClass("hide")
       .addClass("block");
@@ -84,7 +82,7 @@ function stepError(qId) {
 // Q1 required
 function goQ2() {
   if (footShape != null) {
-    // hide step 1, show step
+    // hide step 1, show step 2
     $(".q1-foot-shape")
       .removeClass("flex-column-override")
       .addClass("hide");
@@ -112,7 +110,6 @@ function goQ3() {
       .addClass("flex-column-override");
   } else {
     let qId = $(this).data("q-id");
-    console.log(qId);
     stepError(qId);
   }
 }
@@ -122,7 +119,7 @@ $(".btn-step-3").click(goQ3);
 // Q3 one select required
 function goQ4() {
   if (category != "") {
-    // hide step 2, show step 3
+    // hide step 3, show step 4
     $(".q3-shoe-style")
       .removeClass("flex-column-override")
       .addClass("hide");
@@ -131,19 +128,17 @@ function goQ4() {
       .addClass("flex-column-override");
   } else {
     let qId = $(this).data("q-id");
-    console.log(qId);
     stepError(qId);
   }
 }
 
 //////////////////////////////////
 // 3. when done, send to database
+//////////////////////////////////
 
 const baseURL = "https://shoe-insights-backend.herokuapp.com/api/shoe";
 
 function submitSearch() {
-  console.log("submitted");
-  console.log(footShape, gender, womensSize);
   $.post(baseURL, {
     footShape,
     //-----------------
