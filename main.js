@@ -31,7 +31,9 @@ let theme = "";
 // get foot type value
 function getFootShape() {
   footShape = $(this).data("foot-shape-id");
+  console.log(footShape);
 }
+
 $(".foot-button").click(getFootShape);
 
 // get shoe size gender and value
@@ -60,35 +62,33 @@ function getShoeStyle() {
 // 2. when user selects next, hide current div and show next div
 ///////////////////////////////////////////////////////////////////
 
+// go back to previous question
+function goBack() {
+  let currentId = $(this).data("back-id");
+  let previousId = currentId - 1;
+  $(`.q-${currentId}-section`)
+    .removeClass("block")
+    .addClass("hide");
+  $(`.q-${previousId}-section`)
+    .removeClass("hide")
+    .addClass("block");
+}
+
+$(".btn-back").click(goBack);
+
 // error msg for required questions
 function stepError(qId) {
-  if (qId === 1) {
-    $(".q1-not-selected")
-      .removeClass("hide")
-      .addClass("block");
-  }
-  if (qId === 2) {
-    $(".q2-not-selected")
-      .removeClass("hide")
-      .addClass("block");
-  }
-  if (qId === 3) {
-    $(".q3-not-selected")
-      .removeClass("hide")
-      .addClass("block");
-  }
+  $(`.q${qId}-not-selected`)
+    .removeClass("hide")
+    .addClass("block");
 }
 
 // Q1 required
 function goQ2() {
   if (footShape != null) {
     // hide step 1, show step 2
-    $(".q1-foot-shape")
-      .removeClass("flex-column-override")
-      .addClass("hide");
-    $(".q2-shoe-size")
-      .removeClass("hide")
-      .addClass("flex-column-override");
+    $(".q1-foot-shape").addClass("hide");
+    $(".q2-shoe-size").removeClass("hide");
   } else {
     let qId = $(this).data("q-id");
     stepError(qId);
@@ -99,15 +99,13 @@ $(".btn-step-2").click(goQ2);
 
 // Q2 required
 //TODO: add men's size to data model and request body, account for multiple size selections
+
+// go to q3
 function goQ3() {
   if (womensSize != null) {
     // hide step 2, show step 3
-    $(".q2-shoe-size")
-      .removeClass("flex-column-override")
-      .addClass("hide");
-    $(".q3-shoe-style")
-      .removeClass("hide")
-      .addClass("flex-column-override");
+    $(".q2-shoe-size").addClass("hide");
+    $(".q3-shoe-style").removeClass("hide");
   } else {
     let qId = $(this).data("q-id");
     stepError(qId);
@@ -116,16 +114,12 @@ function goQ3() {
 
 $(".btn-step-3").click(goQ3);
 
-// Q3 one select required
+// Q3 required
 function goQ4() {
   if (category != "") {
     // hide step 3, show step 4
-    $(".q3-shoe-style")
-      .removeClass("flex-column-override")
-      .addClass("hide");
-    $(".q4-more")
-      .removeClass("hide")
-      .addClass("flex-column-override");
+    $(".q3-shoe-style").addClass("hide");
+    $(".q4-more").removeClass("hide");
   } else {
     let qId = $(this).data("q-id");
     stepError(qId);

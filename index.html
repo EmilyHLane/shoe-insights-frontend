@@ -58,7 +58,7 @@
             <h2 class="font-1dot5em bgc-red white-text font-w-200 finder-header margin-bottom-0 text-center">Find shoes that fit</h2>
             <div class="container find-shoe-container pad-top-60px pad-bottom-60px flex-column-override">
 
-                <div class="q1-foot-shape flex-column-override">
+                <div data-section-id="1" class="q-1-section q1-foot-shape block">
                         <h3 class="margin-0-auto width-70p">Step 1: Select the image that best matches your foot shape</h3>
                         <p class="margin-0-auto width-70p">(This step is required.)</p>
                         <div class="step-container flex-space-even width-70p">
@@ -72,10 +72,10 @@
                             </button>
                         </div>
                         <p class="q1-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a foot shape.</p>
-                        <button data-q-id="1" class="flex-self-right btn btn-primary font-bolder btn-step-2">Next: Shoe size</button>
+                        <button data-q-id="1" class="margin-left-auto flex-self-right btn btn-primary font-bolder btn-step-2">Next: Shoe size</button>
                 </div>
 
-                <div class="q2-shoe-size hide">
+                <div data-section-id="2" class="q-2-section q2-shoe-size hide">
                         <h3 class="margin-0-auto width-70p">Step 2: Select your shoe size and width.</h3>
                         <p class="margin-0-auto width-70p">(This step is required.)</p>
                         <div class="step-container flex-space-even width-70p">
@@ -120,33 +120,33 @@
                         </div>
                         <p class="q2-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a shoe size.</p>
                         <section class="next-prev-buttons flex-space-btwn">
-                            <button class="btn btn-primary font-bolder">Previous: Foot shape</button>
+                            <button data-back-id="2"class="btn-back btn btn-primary font-bolder">Previous: Foot shape</button>
                             <button data-q-id="2"class="flex-self-right btn btn-primary font-bolder btn-step-3">Next: Shoe style</button>
                         </section>
                         
                 </div>
 
-                <div class="q3-shoe-style hide">
+                <div data-section-id="3" class="q-3-section q3-shoe-style hide">
                     <h3 class="margin-0-auto width-70p">Step 3: Select a shoe style.</h3>
                     <p class="margin-0-auto width-70p">(At least one selection is required.)</p>
                     <h1>add style selections here</h1>
                     <p class="q3-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a style.</p>
                     <section class="next-prev-buttons flex-space-btwn">
-                        <button class="btn btn-primary font-bolder">Previous: Shoe size</button>
+                        <button data-back-id="3" class="btn-back btn btn-primary font-bolder">Previous: Shoe size</button>
                         <button data-q-id="3" class="flex-self-right btn btn-primary font-bolder btn-step-4">Next: Brand and price</button>
                     </section>
                     <button class="btn-done text-center width-100p margin-top-50px btn btn-primary font-bolder">Done</button>
                 </div>
 
-                <div class="q4-more hide">
+                <div data-section-id="4" class="q-4-section q4-more hide">
                     <h3 class="margin-0-auto width-70p">Step 4: Select additional filters</h3>
                     <h1>add filter selections here</h1>
                     <p class="q4-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a style.</p>
                     <section class="next-prev-buttons flex-space-btwn">
-                        <button class="btn btn-primary font-bolder">Previous: Shoe style</button>
+                        <button data-back-id="4" class="btn-back btn btn-primary font-bolder">Previous: Shoe style</button>
                         <button data-q-id="4" class="flex-self-right btn btn-primary font-bolder btn-step-5">Next: More options</button>
                     </section>
-                    
+        
                     <button class="btn-done text-center width-100p margin-top-50px btn btn-primary font-bolder">Done</button>
                 </div>
 
@@ -163,9 +163,9 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-
-     <!-- bootstrap CDN -->
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+    <!-- bootstrap CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="main.js"></script>
   </body>
 </html>
