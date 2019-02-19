@@ -1,4 +1,13 @@
 /* ----------------------------- */
+/*           variables           */
+/* ----------------------------- */
+
+:root {
+  --primary-color: #730212;
+  --error-red: #af0000;
+}
+
+/* ----------------------------- */
 /*        utility classes        */
 /* ----------------------------- */
 .block {
@@ -112,15 +121,15 @@
 }
 
 .red-border {
-  border: 2px solid #730212;
+  border: 2px solid var(--primary-color);
 }
 
 .red-border-left {
-  border-left: 2px solid #730212;
+  border-left: 2px solid var(--primary-color);
 }
 
 .bgc-red {
-  background-color: #730212;
+  background-color: var(--primary-color);
 }
 
 .text-center {
@@ -136,11 +145,11 @@
 }
 
 .dark-red-text {
-  color: #730212;
+  color: var(--primary-color);
 }
 
 .error-red-text {
-  color: #af0000;
+  color: var(--error-red);
 }
 
 .white-text {
@@ -212,20 +221,20 @@ h1 {
 }
 
 .btn-primary {
-  color: #730212;
+  color: var(--primary-color);
   background-color: white;
   border-color: rgb(95, 95, 95);
 }
 
 .btn-primary:hover {
   color: white;
-  background-color: #730212;
+  background-color: var(--primary-color);
   border-color: rgb(95, 95, 95);
 }
 
 .section-divider {
   width: 100%;
-  border-bottom: 1px solid #730212;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 /* find shoes section */
@@ -246,6 +255,7 @@ h1 {
   width: 30%;
   border: none;
   padding: 0;
+  background: white;
 }
 
 .shoe-gender:hover,
@@ -253,7 +263,7 @@ h1 {
 .shoe-size-button:hover,
 .shoe-size-button:focus {
   color: white;
-  background: #730212;
+  background: var(--primary-color);
 }
 
 .shoe-size-button {
