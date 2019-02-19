@@ -105,7 +105,7 @@ function goQ3() {
   if (womensSize != null) {
     // hide step 2, show step 3
     $(".q2-shoe-size").addClass("hide");
-    $(".q3-shoe-style").removeClass("hide");
+    $(".q3-shoe-category").removeClass("hide");
   } else {
     let qId = $(this).data("q-id");
     stepError(qId);
@@ -118,7 +118,7 @@ $(".btn-step-3").click(goQ3);
 function goQ4() {
   if (category != "") {
     // hide step 3, show step 4
-    $(".q3-shoe-style").addClass("hide");
+    $(".q3-shoe-category").addClass("hide");
     $(".q4-more").removeClass("hide");
   } else {
     let qId = $(this).data("q-id");
