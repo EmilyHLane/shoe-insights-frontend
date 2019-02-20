@@ -12,7 +12,9 @@
 let footShape = null;
 let gender = "";
 let womensSize = null;
+let mensSize = null;
 let womensWidth = "";
+let mensWidth = "";
 let category = "";
 let subCategory = "";
 let brand = "";
@@ -36,8 +38,7 @@ function getFootShape() {
 
 $(".foot-button").click(getFootShape);
 
-// get shoe size gender and value
-// TODO: add mens and width
+// show shoe size values, get shoe size gender
 function getShoeGender() {
   $(".size-buttons").removeClass("hide");
   $(".width-buttons").addClass("hide");
@@ -47,15 +48,18 @@ function getShoeGender() {
   console.log(gender);
 }
 
+//get shoe size depending on gender
 function getShoeSize() {
   if (gender === "women") {
     womensSize = $(this).html();
+    console.log(womensSize);
   } else if (gender === "men") {
     mensSize = $(this).html();
+    console.log(mensSize);
   }
-  console.log(womensSize);
 }
 
+//show shoe width values
 function showWidth() {
   //hide shoe size
   $(".size-buttons").addClass("hide");
@@ -63,13 +67,15 @@ function showWidth() {
   $(".width-buttons").removeClass("hide");
 }
 
+//get shoe width values depending on gender
 function getShoeWidth() {
   if (gender === "women") {
-    womensWidth = $(this).html();
+    womensWidth = $(this).data("shoe-width");
+    console.log(womensWidth);
   } else if (gender === "men") {
-    mensWidth = $(this).html();
+    mensWidth = $(this).data("shoe-width");
+    console.log(mensWidth);
   }
-  console.log(womensWidth);
 }
 
 $(".shoe-gender").click(getShoeGender);
@@ -79,13 +85,20 @@ $(".shoe-width-button").click(getShoeWidth);
 
 // get shoe style
 function getShoeStyle() {
-  //code here
+  if (category === "") {
+    category = $(this).val();
+    console.log(category);
+  } else {
+    category = `${category}, ${$(this).val()}`;
+    console.log(category);
+  }
 }
 
 //click event here
+$(".form-check-input").click(getShoeStyle);
 
 ///////////////////////////////////////////////////////////////////
-// 2. when user selects next, hide current div and show next div
+// 2. user selects next/previous to go forward/back
 ///////////////////////////////////////////////////////////////////
 
 // go back to previous question
@@ -165,10 +178,10 @@ function submitSearch() {
     gender,
     womensSize,
     // mensSize,
-    womensWidth
+    womensWidth,
     // mensWidth
     //-----------------
-    //   category,
+    category
     //   subCategory,
     //   color,
     //   bootShaft,

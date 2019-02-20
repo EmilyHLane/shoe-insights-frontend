@@ -99,6 +99,10 @@
   padding-bottom: 60px;
 }
 
+.flex {
+  display: flex;
+}
+
 .flex-space-btwn {
   display: flex;
   justify-content: space-between;
@@ -142,10 +146,6 @@
 
 .text-end {
   text-align: end;
-}
-
-.text-left {
-  text-align: left;
 }
 
 .dark-red-text {
@@ -288,6 +288,12 @@ h1 {
 .shoe-width-button {
   width: 60px;
 }
+
+/* -------------------------------- */
+/*         animations               */
+/* -------------------------------- */
+
+/* TODO: fade in mens, womens, width buttons on click  */
 
 /* -------------------------------- */
 /*         media queries            */
