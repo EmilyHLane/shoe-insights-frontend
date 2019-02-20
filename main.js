@@ -83,8 +83,8 @@ $(".shoe-size-button").click(getShoeSize);
 $(".shoe-width").click(showWidth);
 $(".shoe-width-button").click(getShoeWidth);
 
-// get shoe style
-function getShoeStyle() {
+// get shoe category
+function getShoeCategory() {
   if (category === "") {
     category = $(this).val();
     console.log(category);
@@ -94,8 +94,46 @@ function getShoeStyle() {
   }
 }
 
-//click event here
-$(".form-check-input").click(getShoeStyle);
+$(".form-check-input").click(getShoeCategory);
+
+// show shoe prices
+function showPrice() {
+  $(".price-list").removeClass("hide");
+  $(".brand-list").addClass("hide");
+}
+
+// get shoe price
+function getShoePrice() {
+  if (price === "") {
+    price = $(this).data("shoe-price");
+    console.log(price);
+  } else {
+    price = `${price}, ${$(this).data("shoe-price")}`;
+    console.log(price);
+  }
+}
+
+$(".shoe-prices").click(showPrice);
+$(".price-button").click(getShoePrice);
+
+// show shoe brand
+function showBrand() {
+  $(".brand-list").removeClass("hide");
+  $(".price-list").addClass("hide");
+}
+
+// get shoe brand
+function getShoeBrand() {
+  if (brand === "") {
+    brand = $(this).html();
+    console.log(brand);
+  } else {
+    price = `${brand}, ${$(this).html()}`;
+    console.log(brand);
+  }
+}
+$(".shoe-brands").click(showBrand);
+$(".brand-button").click(getShoeBrand);
 
 ///////////////////////////////////////////////////////////////////
 // 2. user selects next/previous to go forward/back
@@ -122,7 +160,7 @@ function stepError(qId) {
     .addClass("block");
 }
 
-// Q1 required
+// Q1 required, go to Q2
 function goQ2() {
   if (footShape != null) {
     // hide step 1, show step 2
@@ -136,7 +174,7 @@ function goQ2() {
 
 $(".btn-step-2").click(goQ2);
 
-// Q2 required
+// Q2 required, go to Q3
 //TODO: add men's size to data model and request body, account for multiple size selections
 
 // go to q3
@@ -153,17 +191,19 @@ function goQ3() {
 
 $(".btn-step-3").click(goQ3);
 
-// Q3 required
+// Q3 required, go to Q4
 function goQ4() {
   if (category != "") {
     // hide step 3, show step 4
     $(".q3-shoe-category").addClass("hide");
-    $(".q4-more").removeClass("hide");
+    $(".q4-brand-price").removeClass("hide");
   } else {
     let qId = $(this).data("q-id");
     stepError(qId);
   }
 }
+
+$(".btn-step-4").click(goQ4);
 
 //////////////////////////////////
 // 3. when done, send to database
@@ -181,7 +221,7 @@ function submitSearch() {
     womensWidth,
     // mensWidth
     //-----------------
-    category
+    category,
     //   subCategory,
     //   color,
     //   bootShaft,
@@ -191,7 +231,7 @@ function submitSearch() {
     //   occasion,
     //------------------
     //   brand,
-    //   price,
+    price
     //------------------
     //   materials,
     //   features,

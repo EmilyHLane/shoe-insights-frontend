@@ -38,6 +38,10 @@
   width: 100%;
 }
 
+.width-300px {
+  width: 300px;
+}
+
 .width-70px {
   width: 70px;
 }
@@ -48,6 +52,10 @@
 
 .height-100p {
   height: 100%;
+}
+
+.height-300px {
+  height: 300px;
 }
 
 .margin-0-auto {
@@ -124,6 +132,10 @@
   flex-direction: column;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
 .border-none {
   border: none;
 }
@@ -138,6 +150,10 @@
 
 .bgc-red {
   background-color: var(--primary-color);
+}
+
+.bg-none {
+  background: none;
 }
 
 .text-center {
@@ -262,14 +278,9 @@ h1 {
   background: white;
 }
 
-.shoe-gender:hover,
-.shoe-gender:focus,
-.shoe-width:hover,
-.shoe-width:focus,
-.shoe-size-button:hover,
-.shoe-size-button:focus,
-.shoe-width-button:hover,
-.shoe-width-button:focus {
+.focus-hover-contrast:hover,
+.focus-hover-contrast:focus,
+.selected-style {
   color: white;
   background: var(--primary-color);
 }
