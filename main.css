@@ -38,6 +38,10 @@
   width: 100%;
 }
 
+.width-70px {
+  width: 70px;
+}
+
 .width-50p {
   width: 50%;
 }
@@ -260,18 +264,29 @@ h1 {
 
 .shoe-gender:hover,
 .shoe-gender:focus,
+.shoe-width:hover,
+.shoe-width:focus,
 .shoe-size-button:hover,
-.shoe-size-button:focus {
+.shoe-size-button:focus,
+.shoe-width-button:hover,
+.shoe-width-button:focus {
   color: white;
   background: var(--primary-color);
 }
 
-.shoe-size-button {
+.shoe-size-button,
+.shoe-width-button {
   height: 40px;
-  width: 40px;
   padding: 0;
   background: none;
   margin-bottom: 5px;
+}
+
+.shoe-size-button {
+  width: 40px;
+}
+.shoe-width-button {
+  width: 60px;
 }
 
 /* -------------------------------- */

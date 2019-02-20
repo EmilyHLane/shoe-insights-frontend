@@ -39,17 +39,43 @@ $(".foot-button").click(getFootShape);
 // get shoe size gender and value
 // TODO: add mens and width
 function getShoeGender() {
+  $(".size-buttons").removeClass("hide");
+  $(".width-buttons").addClass("hide");
   gender = $(this)
     .html()
     .toLowerCase();
+  console.log(gender);
 }
 
 function getShoeSize() {
-  womensSize = $(this).html();
+  if (gender === "women") {
+    womensSize = $(this).html();
+  } else if (gender === "men") {
+    mensSize = $(this).html();
+  }
+  console.log(womensSize);
+}
+
+function showWidth() {
+  //hide shoe size
+  $(".size-buttons").addClass("hide");
+  //show shoe width
+  $(".width-buttons").removeClass("hide");
+}
+
+function getShoeWidth() {
+  if (gender === "women") {
+    womensWidth = $(this).html();
+  } else if (gender === "men") {
+    mensWidth = $(this).html();
+  }
+  console.log(womensWidth);
 }
 
 $(".shoe-gender").click(getShoeGender);
 $(".shoe-size-button").click(getShoeSize);
+$(".shoe-width").click(showWidth);
+$(".shoe-width-button").click(getShoeWidth);
 
 // get shoe style
 function getShoeStyle() {
@@ -137,8 +163,10 @@ function submitSearch() {
     footShape,
     //-----------------
     gender,
-    womensSize
-    //   womensWidth,
+    womensSize,
+    // mensSize,
+    womensWidth
+    // mensWidth
     //-----------------
     //   category,
     //   subCategory,
