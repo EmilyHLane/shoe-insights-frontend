@@ -128,7 +128,7 @@ function getShoeBrand() {
     brand = $(this).html();
     console.log(brand);
   } else {
-    price = `${brand}, ${$(this).html()}`;
+    brand = `${brand}, ${$(this).html()}`;
     console.log(brand);
   }
 }
@@ -230,7 +230,7 @@ function submitSearch() {
     //   toeStyle,
     //   occasion,
     //------------------
-    //   brand,
+    brand,
     price
     //------------------
     //   materials,
