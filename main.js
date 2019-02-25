@@ -42,6 +42,19 @@ $(".foot-button").click(getFootShape);
 function getShoeGender() {
   $(".size-buttons").removeClass("hide");
   $(".width-buttons").addClass("hide");
+
+  if (
+    $(this)
+      .text()
+      .toLowerCase() === "men"
+  ) {
+    $(".mens-shoes").addClass("selected-style");
+    $(".womens-shoes").removeClass("selected-style");
+  } else {
+    $(".mens-shoes").removeClass("selected-style");
+    $(".womens-shoes").addClass("selected-style");
+  }
+
   gender = $(this)
     .html()
     .toLowerCase();
