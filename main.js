@@ -38,27 +38,27 @@ function getFootShape() {
 
 $(".foot-button").click(getFootShape);
 
-// show shoe size values, get shoe size gender
+// show shoe size values
+function highlightSelected() {
+  if (gender === "men") {
+    $(".mens-shoes").addClass("selected-style");
+    $(".womens-shoes").removeClass("selected-style");
+  } else if (gender === "women") {
+    $(".mens-shoes").removeClass("selected-style");
+    $(".womens-shoes").addClass("selected-style");
+  }
+}
+
+// get shoe gender
 function getShoeGender() {
   $(".size-buttons").removeClass("hide");
   $(".width-buttons").addClass("hide");
 
-  if (
-    $(this)
-      .text()
-      .toLowerCase() === "men"
-  ) {
-    $(".mens-shoes").addClass("selected-style");
-    $(".womens-shoes").removeClass("selected-style");
-  } else {
-    $(".mens-shoes").removeClass("selected-style");
-    $(".womens-shoes").addClass("selected-style");
-  }
-
   gender = $(this)
     .html()
     .toLowerCase();
-  console.log(gender);
+
+  highlightSelected();
 }
 
 //get shoe size depending on gender
