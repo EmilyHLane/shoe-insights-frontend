@@ -39,26 +39,27 @@ function getFootShape() {
 $(".foot-button").click(getFootShape);
 
 // show shoe size values
-function highlightSelected() {
+function highlightSelectedGender() {
   if (gender === "men") {
     $(".mens-shoes").addClass("selected-style");
     $(".womens-shoes").removeClass("selected-style");
   } else if (gender === "women") {
-    $(".mens-shoes").removeClass("selected-style");
     $(".womens-shoes").addClass("selected-style");
+    $(".mens-shoes").removeClass("selected-style");
   }
 }
 
 // get shoe gender
 function getShoeGender() {
-  $(".size-buttons").removeClass("hide");
   $(".width-buttons").addClass("hide");
+  $(".size-buttons").removeClass("hide");
 
   gender = $(this)
     .html()
     .toLowerCase();
+  console.log(gender);
 
-  highlightSelected();
+  highlightSelectedGender();
 }
 
 //get shoe size depending on gender
@@ -109,10 +110,23 @@ function getShoeCategory() {
 
 $(".form-check-input").click(getShoeCategory);
 
+function highlightSelectedOption(option) {
+  console.log(option);
+  if (option === "brand") {
+    $(".shoe-brands").addClass("selected-style");
+    $(".shoe-prices").removeClass("selected-style");
+  } else if (option === "price") {
+    $(".shoe-prices").addClass("selected-style");
+    $(".shoe-brands").removeClass("selected-style");
+  }
+}
+
 // show shoe prices
 function showPrice() {
   $(".price-list").removeClass("hide");
   $(".brand-list").addClass("hide");
+  let option = "price";
+  highlightSelectedOption(option);
 }
 
 // get shoe price
@@ -133,6 +147,8 @@ $(".price-button").click(getShoePrice);
 function showBrand() {
   $(".brand-list").removeClass("hide");
   $(".price-list").addClass("hide");
+  let option = "brand";
+  highlightSelectedOption(option);
 }
 
 // get shoe brand
