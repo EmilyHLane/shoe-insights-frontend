@@ -3,7 +3,7 @@
 /* ----------------------------- */
 
 :root {
-  --primary-color: #730212;
+  --primary-color: #009eef;
   --error-red: #af0000;
 }
 
@@ -22,12 +22,20 @@
   height: 40vh;
 }
 
-.vh-90 {
+/* .vh-90 {
   height: 90vh;
-}
+} */
 
 .vh-100 {
   height: 100vh;
+}
+
+.height-100p {
+  height: 100%;
+}
+
+.height-300px {
+  height: 300px;
 }
 
 .width-70p {
@@ -50,26 +58,33 @@
   width: 50%;
 }
 
-.height-100p {
-  height: 100%;
+.max-w-900px {
+  max-width: 900px;
 }
 
-.height-300px {
-  height: 300px;
+.max-w-600px {
+  max-width: 600px;
 }
 
 .margin-0-auto {
   margin: 0 auto;
 }
 
+.margin-10px {
+  margin: 10px;
+}
+
 .margin-5p-auto {
   margin: 5% auto;
 }
 
-.margin-top-50px {
-  margin-top: 50px;
+.margin-top-30px {
+  margin-top: 30px;
 }
 
+.margin-top-20p {
+  margin-top: 20%;
+}
 .margin-bottom-0 {
   margin-bottom: 0;
 }
@@ -80,6 +95,10 @@
 
 .margin-right-20px {
   margin-right: 20px;
+}
+
+.margin-right-100px {
+  margin-right: 100px;
 }
 
 .margin-up-20 {
@@ -101,6 +120,10 @@
 
 .pad-top-60px {
   padding-top: 60px;
+}
+
+.pad-top-10p {
+  padding-top: 10%;
 }
 
 .pad-bottom-60px {
@@ -182,6 +205,7 @@
 
 .nav-hover:hover {
   color: white;
+  text-decoration-color: #009eef;
 }
 
 .font-w-200 {
@@ -222,8 +246,12 @@ h1 {
   line-height: 36px;
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
 .hero-image {
-  background-image: url(/images/cropHero.png);
+  background-image: url(/images/hero.jpeg);
   background-size: cover;
   background-position: bottom;
 }
@@ -260,7 +288,7 @@ h1 {
 /* find shoes section */
 
 .finder-header {
-  padding: 30px 30px 10px;
+  padding: 20px;
 }
 
 .step-container {
@@ -296,6 +324,7 @@ h1 {
 .shoe-size-button {
   width: 40px;
 }
+
 .shoe-width-button {
   width: 60px;
 }

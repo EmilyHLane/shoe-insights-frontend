@@ -15,7 +15,7 @@
 
   <body>
     <a href="#intro" class="skip-nav">Skip navigation</a>
-    <div class="jumbotron jumbotron-fluid hero-image vh-90 margin-bottom-0">
+    <div class="jumbotron jumbotron-fluid hero-image vh-100 margin-bottom-0">
             <header class="flex-space-btwn">
                 <h1 class="font-1dot5em white-text inputne-height-36px font-w-200">Shoe Insights</h1>
                 <nav>
@@ -23,11 +23,11 @@
                     <a href="#find-shoes" class="nav-hover white-text font-1dot5em font-w-200">Find Shoes</a>
                 </nav>
             </header>
-            <p id="intro" class="lead white-text font-3em width-70p margin-5p-auto">Lorem ipsum dolor sit amet consectetur adipisicing einputt. Reiciendis, corporis. Quis obcaecati placeat nisi officia veinputt, ad praesentium.</p>
+            <p id="intro" class="lead white-text text-center font-3em width-70p margin-5p-auto">Lorem ipsum dolor sit amet consectetur adipisicing einputt. Reiciendis, corporis.</p>
     </div>   
     
     <main class="red-border">
-        <section  id="about" class="container flex-space-even vh-90 pad-top-60px">
+        <section  id="about" class="container flex-space-even vh-100 pad-top-10p">
                 <article class="card card-1" style="width: 18rem;">
                    <i class="fas fa-shoe-prints icon-size-margin dark-red-text"></i> 
                     <div class="card-body">
@@ -58,28 +58,34 @@
             <h2 class="font-1dot5em bgc-red white-text font-w-200 finder-header margin-bottom-0 text-center">Find shoes</h2>
             <div class="container find-shoe-container pad-top-60px pad-bottom-60px flex-column-override">
 
-                <div data-section-id="1" class="q-1-section q1-foot-shape block">
-                        <h3 class="margin-0-auto width-70p">Step 1: Select the image that best matches your foot shape</h3>
-                        <p class="margin-0-auto width-70p">(This step is required.)</p>
-                        <div class="step-container flex-space-even width-70p">
-                            <button class="foot-button btn" data-foot-shape-id="1">
-                                <img id="foot-shape-1" class="vh-40" src="images/type1.png" alt="describe foot shape 1"></button>
-                            <button class="foot-button btn" data-foot-shape-id="2">
-                                <img id="foot-shape-2" class="vh-40" src="images/type2.png" alt="describe foot shape 2">
-                            </button>
-                            <button class="foot-button btn" data-foot-shape-id="3">
-                                <img id="foot-shape-3" class="vh-40" src="images/type3.png" alt="describe foot shape 3">
-                            </button>
+                <section data-section-id="1" class="q-1-section q1-foot-shape block max-w-900px margin-0-auto">
+                    <div>
+                            <h3>Step 1: Select the image that best matches your foot shape</h3>
+                            <p>(This step is required.)</p>
+                            <div class="step-container flex-space-even width-70p">
+                                <button class="foot-button btn margin-10px" data-foot-shape-id="1">
+                                    <img id="foot-shape-1" class="vh-40 width-100p" src="images/type1.png" alt="describe foot shape 1"></button>
+                                <button class="foot-button btn margin-10px" data-foot-shape-id="2">
+                                    <img id="foot-shape-2" class="vh-40 width-100p" src="images/type2.png" alt="describe foot shape 2">
+                                </button>
+                                <button class="foot-button btn margin-10px" data-foot-shape-id="3">
+                                    <img id="foot-shape-3" class="vh-40 width-100p" src="images/type3.png" alt="describe foot shape 3">
+                                </button>
+                            </div>
+                            <p class="q1-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a foot shape.</p>
+                    </div>
+                        
+                        <div>
+                            <button data-q-id="1" class="margin-left-auto flex-self-right btn btn-primary font-bolder btn-step-2">Next: Shoe size</button>
                         </div>
-                        <p class="q1-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a foot shape.</p>
-                        <button data-q-id="1" class="margin-left-auto flex-self-right btn btn-primary font-bolder btn-step-2">Next: Shoe size</button>
-                </div>
+                      
+                </section>
 
-                <div data-section-id="2" class="q-2-section q2-shoe-size hide">
-                        <h3 class="margin-0-auto width-70p">Step 2: Select your shoe size and width.</h3>
-                        <p class="margin-0-auto width-70p">(This step is required.)</p>
+                <section data-section-id="2" class="q-2-section q2-shoe-size hide max-w-900px margin-0-auto">
+                        <h3>Step 2: Select your shoe size and width.</h3>
+                        <p>(This step is required.)</p>
 
-                        <div class="step-container flex width-70p">
+                        <div class="step-container flex">
                             <section class="gender margin-right-20px width-70px">
                                 <button class="selected-style shoe-gender mens-shoes focus-hover-contrast border-none margin-bottom-10px width-100p text-left">Men</button>
                                 <button class="shoe-gender womens-shoes focus-hover-contrast border-none margin-bottom-10px width-100p text-left">Women</button>
@@ -128,44 +134,44 @@
                         </div>
 
                         <p class="q2-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a shoe size.</p>
-                        <section class="next-prev-buttons flex-space-btwn">
+                        <section class="next-prev-buttons flex-space-btwn margin-top-20p">
                             <button data-back-id="2"class="btn-back btn btn-primary font-bolder">Previous: Foot shape</button>
                             <button data-q-id="2"class="flex-self-right btn btn-primary font-bolder btn-step-3">Next: Shoe category</button>
                         </section>
                         
-                </div>
+                </section>
 
-                <div data-section-id="3" class="q-3-section q3-shoe-category hide">
-                    <h3 class="margin-0-auto width-70p">Step 3: Select a shoe category.</h3>
-                    <p class="margin-0-auto width-70p">(This step is required.)</p>
-                    <div class="womens-category margin-5p-auto width-70p flex-space-btwn">
+                <section data-section-id="3" class="q-3-section q3-shoe-category hide max-w-900px margin-0-auto">
+                    <h3>Step 3: Select a shoe category.</h3>
+                    <p>(This step is required.)</p>
+                    <div class="womens-category margin-5p-auto flex-space-btwn">
 
                         <div class="width-50p">
-                            <div class="form-check margin-bottom-10px">
+                            <div class="form-check margin-bottom-10px margin-right-100px">
                                 <input class="form-check-input" type="checkbox" id="boat-shoes" value="boat shoes">
                                 <label class="form-check-label" for="boat-shoes">
                                     Boat Shoes
                                 </label>
                             </div>
-                            <div class="form-check margin-bottom-10px">
+                            <div class="form-check margin-bottom-10px margin-right-100px">
                                 <input class="form-check-input" type="checkbox" id="boots" value="boots">
                                 <label class="form-check-label" for="boots">
                                     Boots
                                 </label>
                             </div>
-                            <div class="form-check margin-bottom-10px">
+                            <div class="form-check margin-bottom-10px margin-right-100px">
                                 <input class="form-check-input" type="checkbox" id="clogs-mules" value="clogs & mules">
                                 <label class="form-check-label" for="clogs-mules">
                                     Clogs & Mules
                                 </label>
                             </div>
-                            <div class="form-check margin-bottom-10px">
+                            <div class="form-check margin-bottom-10px margin-right-100px">
                                 <input class="form-check-input" type="checkbox" id="flats" value="flats">
                                 <label class="form-check-label" for="flats">
                                     Flats
                                 </label>
                             </div>
-                            <div class="form-check margin-bottom-10px">
+                            <div class="form-check margin-bottom-10px margin-right-100px">
                                 <input class="form-check-input" type="checkbox" id="heels" value="heels">
                                 <label class="form-check-label" for="heels">
                                     Heels
@@ -174,25 +180,25 @@
                         </div>
 
                         <div class="width-50p">
-                            <div class="form-check margin-bottom-10px">
+                            <div class="form-check margin-bottom-10px margin-right-100px">
                                 <input class="form-check-input" type="checkbox" id="loafers" value="loafers">
                                 <label class="form-check-label" for="loafers">
                                     Loafers
                                 </label>
                             </div>
-                            <div class="form-check margin-bottom-10px">
+                            <div class="form-check margin-bottom-10px margin-right-100px">
                                 <input class="form-check-input" type="checkbox" id="oxfords" value="oxfords">
                                 <label class="form-check-label" for="oxfords">
                                     Oxfords
                                 </label>
                             </div>
-                            <div class="form-check margin-bottom-10px">
+                            <div class="form-check margin-bottom-10px margin-right-100px">
                                 <input class="form-check-input" type="checkbox" id="sandals" value="sandals">
                                 <label class="form-check-label" for="sandals">
                                     Sandals
                                 </label>
                             </div>
-                            <div class="form-check margin-bottom-10px">
+                            <div class="form-check margin-bottom-10px margin-right-100px">
                                 <input class="form-check-input" type="checkbox" id="sneakers-athletic" value="sneakers & athletic">
                                 <label class="form-check-label" for="sneakers-athletic">
                                     Sneakers & Athletic Shoes
@@ -233,23 +239,23 @@
                     </div>
 
                     <p class="q3-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a style.</p>
-                    <section class="next-prev-buttons flex-space-btwn">
+                    <section class="next-prev-buttons flex-space-btwn margin-top-20p">
                         <button data-back-id="3" class="btn-back btn btn-primary font-bolder">Previous: Shoe size</button>
                         <button data-q-id="3" class="flex-self-right btn btn-primary font-bolder btn-step-4">Next: Brand and price</button>
                     </section>
-                    <button class="btn-done text-center width-100p margin-top-50px btn btn-primary font-bolder">Done</button>
-                </div>
+                    <button class="btn-done text-center width-100p margin-top-30px btn btn-primary font-bolder">Done</button>
+                </section>
 
-                <div data-section-id="4" class="q-4-section q4-brand-price hide">
-                    <h3 class="margin-0-auto width-70p">Step 4: Select brand and price.</h3>
+                <section data-section-id="4" class="q-4-section q4-brand-price hide max-w-900px margin-0-auto">
+                    <h3>Step 4: Select brand and price.</h3>
 
-                    <div class="step-container flex width-70p">
+                    <div class="step-container flex">
                         <section class="margin-right-20px width-70px">
                             <button class="selected-style shoe-brands focus-hover-contrast border-none margin-bottom-10px width-100p text-left">Brand</button>
                             <button class="shoe-prices focus-hover-contrast border-none margin-bottom-10px width-100p text-left">Price</button>
                         </section>
 
-                        <section class="brand-list red-border-left pad-left-20px overflow-scroll height-300px">
+                        <section class="brand-list red-border-left pad-left-20px overflow-scroll height-300px max-w-600px">
                             <button class="brand-button focus-hover-contrast bg-none margin-bottom-10px width-100p text-left">Adidas</button>
                             <button class="brand-button focus-hover-contrast bg-none margin-bottom-10px width-100p text-left">ASICS</button>
                             <button class="brand-button focus-hover-contrast bg-none margin-bottom-10px width-100p text-left">Anne Klein</button>
@@ -271,23 +277,23 @@
                             <button class="brand-button focus-hover-contrast bg-none margin-bottom-10px width-100p text-left">Vaneli</button> 
                         </section>
 
-                        <section class="price-list red-border-left pad-left-20px hide">
-                            <button data-shoe-price="$25.00 and Under" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-50p text-left">$25 and under</button>
-                            <button data-shoe-price="$50.00 and Under" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-50p text-left">$50 and under</button>
-                            <button data-shoe-price="$100.00 and Under" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-50p text-left">$100 and under</button>
-                            <button data-shoe-price="$200.00 and Under" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-50p text-left">$200 and under</button>
-                            <button data-shoe-price="$200.00 and Over" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-50p text-left">$200 and over</button>
+                        <section class="price-list red-border-left pad-left-20px max-w-600px hide">
+                            <button data-shoe-price="$25.00 and Under" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-100p text-left">$25 and under</button>
+                            <button data-shoe-price="$50.00 and Under" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-100p text-left">$50 and under</button>
+                            <button data-shoe-price="$100.00 and Under" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-100p text-left">$100 and under</button>
+                            <button data-shoe-price="$200.00 and Under" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-100p text-left">$200 and under</button>
+                            <button data-shoe-price="$200.00 and Over" class="price-button focus-hover-contrast bg-none margin-bottom-10px width-100p text-left">$200 and over</button>
                         </section>
                     </div>
 
                     <p class="q4-not-selected error-red-text margin-0-auto width-70p font-bolder font-1dot5em text-center hide margin-up-20">You must select a style.</p>
                     <section class="next-prev-buttons flex-space-btwn">
                         <button data-back-id="4" class="btn-back btn btn-primary font-bolder">Previous: Shoe category</button>
-                        <button data-q-id="4" class="flex-self-right btn btn-primary font-bolder btn-step-5">Next: More options</button>
+                        <!-- <button data-q-id="4" class="flex-self-right btn btn-primary font-bolder btn-step-5">Next: More options</button> -->
                     </section>
         
-                    <button class="btn-done text-center width-100p margin-top-50px btn btn-primary font-bolder">Done</button>
-                </div>
+                    <button class="btn-done text-center width-100p margin-top-30px btn btn-primary font-bolder">Done</button>
+                </section>
 
             </div> 
          
