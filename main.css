@@ -329,6 +329,16 @@ h3 {
   width: 60px;
 }
 
+.inactive,
+.inactive:hover,
+.btn:disabled {
+  background: lightgray;
+  color: #444;
+  border: none;
+}
+
+/* TODO: INACTIVE BUTTON SHOULD NOT RECEIVE FOCUS */
+
 /* -------------------------------- */
 /*         animations               */
 /* -------------------------------- */

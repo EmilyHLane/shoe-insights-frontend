@@ -15,7 +15,8 @@ let womensSize = null;
 let mensSize = null;
 let womensWidth = "";
 let mensWidth = "";
-let category = "";
+// let category = "";
+let category = [];
 let subCategory = "";
 let brand = "";
 let price = "";
@@ -30,7 +31,7 @@ let features = "";
 let performance = "";
 let theme = "";
 
-// get foot type value
+//// foot type  ////
 function getFootShape() {
   footShape = $(this).data("foot-shape-id");
   console.log(footShape);
@@ -38,7 +39,9 @@ function getFootShape() {
 
 $(".foot-button").click(getFootShape);
 
-// show shoe size values
+///// shoe size /////
+
+//show shoe size values //
 function highlightSelectedGender() {
   if (gender === "men") {
     $(".mens-shoes").addClass("selected-style");
@@ -49,7 +52,7 @@ function highlightSelectedGender() {
   }
 }
 
-// get shoe gender
+// get shoe gender //
 function getShoeGender() {
   $(".width-buttons").addClass("hide");
   $(".size-buttons").removeClass("hide");
@@ -97,19 +100,50 @@ $(".shoe-size-button").click(getShoeSize);
 $(".shoe-width").click(showWidth);
 $(".shoe-width-button").click(getShoeWidth);
 
-// get shoe category
-function getShoeCategory() {
-  if (category === "") {
-    category = $(this).val();
-    console.log(category);
-  } else {
-    category = `${category}, ${$(this).val()}`;
-    console.log(category);
+///// shoe category /////
+
+//add selected categories to categorys array, remove deselected categories
+function getShoeCategory(e) {
+  if ($(e).hasClass("selected")) {
+    selectedCat = $(e).val();
+    category.push(selectedCat);
+  } else if ($(e).hasClass("deselected")) {
+    //find index number and remove from array
+    deselectedcat = $(e).val();
+    for (let i = 0; i < category.length; i++) {
+      if (category[i] === deselectedcat) {
+        category.splice(i, 1);
+      }
+    }
+  }
+  //done button greyed out when no categories selected
+  if (category.length > 0) {
+    $(".btn-done")
+      .removeClass("inactive")
+      .removeAttr("disabled");
+  } else if (category.length < 1) {
+    $(".btn-done")
+      .addClass("inactive")
+      .prop("disabled", true);
   }
 }
 
-$(".form-check-input").click(getShoeCategory);
+//check for selected or deselected
+function isSelected() {
+  const e = this;
+  $(this)
+    .toggleClass("deselected")
+    .toggleClass("selected")
+    .promise()
+    .done(getShoeCategory(e));
+}
 
+//user clicks category checkbox - may be selected or deselected
+$(".form-check-input").click(isSelected);
+
+///// brand and price /////
+
+// keep current selection highlighted
 function highlightSelectedOption(option) {
   console.log(option);
   if (option === "brand") {
@@ -250,7 +284,9 @@ function submitSearch() {
     womensWidth,
     // mensWidth
     //-----------------
-    category,
+    //convert category array to string first
+    //TODO: ASK LI IF NEED TO ADD SPACE AFTER COMMA
+    category: category.toString(),
     //   subCategory,
     //   color,
     //   bootShaft,
