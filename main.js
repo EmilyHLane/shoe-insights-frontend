@@ -1,7 +1,7 @@
 // alert("js is working");
 
 //////////////////////////
-//      find shoes
+//      find shoes      //
 //////////////////////////
 
 //////////////////////////
@@ -34,7 +34,6 @@ let theme = "";
 //// foot type  ////
 function getFootShape() {
   footShape = $(this).data("foot-shape-id");
-  console.log(footShape);
 }
 
 $(".foot-button").click(getFootShape);
@@ -56,11 +55,9 @@ function highlightSelectedGender() {
 function getShoeGender() {
   $(".width-buttons").addClass("hide");
   $(".size-buttons").removeClass("hide");
-
   gender = $(this)
     .html()
     .toLowerCase();
-  console.log(gender);
 
   highlightSelectedGender();
 }
@@ -69,10 +66,8 @@ function getShoeGender() {
 function getShoeSize() {
   if (gender === "women") {
     womensSize = $(this).html();
-    console.log(womensSize);
   } else if (gender === "men") {
     mensSize = $(this).html();
-    console.log(mensSize);
   }
 }
 
@@ -88,10 +83,8 @@ function showWidth() {
 function getShoeWidth() {
   if (gender === "women") {
     womensWidth = $(this).data("shoe-width");
-    console.log(womensWidth);
   } else if (gender === "men") {
     mensWidth = $(this).data("shoe-width");
-    console.log(mensWidth);
   }
 }
 
@@ -101,6 +94,19 @@ $(".shoe-width").click(showWidth);
 $(".shoe-width-button").click(getShoeWidth);
 
 ///// shoe category /////
+
+//done button greyed out and disabled when no categories selected
+function disableDoneBtn() {
+  if (category.length > 0) {
+    $(".btn-done")
+      .removeClass("inactive")
+      .removeAttr("disabled");
+  } else if (category.length < 1) {
+    $(".btn-done")
+      .addClass("inactive")
+      .prop("disabled", true);
+  }
+}
 
 //add selected categories to categorys array, remove deselected categories
 function getShoeCategory(e) {
@@ -116,16 +122,7 @@ function getShoeCategory(e) {
       }
     }
   }
-  //done button greyed out when no categories selected
-  if (category.length > 0) {
-    $(".btn-done")
-      .removeClass("inactive")
-      .removeAttr("disabled");
-  } else if (category.length < 1) {
-    $(".btn-done")
-      .addClass("inactive")
-      .prop("disabled", true);
-  }
+  disableDoneBtn();
 }
 
 //check for selected or deselected
@@ -145,7 +142,6 @@ $(".form-check-input").click(isSelected);
 
 // keep current selection highlighted
 function highlightSelectedOption(option) {
-  console.log(option);
   if (option === "brand") {
     $(".shoe-brands").addClass("selected-style");
     $(".shoe-prices").removeClass("selected-style");
@@ -167,10 +163,8 @@ function showPrice() {
 function getShoePrice() {
   if (price === "") {
     price = $(this).data("shoe-price");
-    console.log(price);
   } else {
     price = `${price}, ${$(this).data("shoe-price")}`;
-    console.log(price);
   }
 }
 
@@ -189,10 +183,8 @@ function showBrand() {
 function getShoeBrand() {
   if (brand === "") {
     brand = $(this).html();
-    console.log(brand);
   } else {
     brand = `${brand}, ${$(this).html()}`;
-    console.log(brand);
   }
 }
 $(".shoe-brands").click(showBrand);
