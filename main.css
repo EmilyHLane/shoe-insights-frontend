@@ -163,15 +163,7 @@
   border: none;
 }
 
-.red-border {
-  border: 2px solid var(--primary-color);
-}
-
-.red-border-left {
-  border-left: 2px solid var(--primary-color);
-}
-
-.bgc-red {
+.bgc-primary {
   background-color: var(--primary-color);
 }
 
@@ -220,6 +212,13 @@
   font-size: 3em;
 }
 
+.italics {
+  font-style: italic;
+}
+
+.small-text {
+  font-size: 0.7em;
+}
 /* ------------------------------- */
 /*        component classes        */
 /* ------------------------------- */
@@ -257,6 +256,10 @@ h3 {
 }
 
 /* about section */
+.main-border {
+  border-top: 6px solid var(--primary-color);
+}
+
 .icon-size-margin {
   font-size: 3em;
   margin: 30px auto;
