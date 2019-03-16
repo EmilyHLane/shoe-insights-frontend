@@ -250,7 +250,7 @@ h3 {
 }
 
 .hero-image {
-  background-image: url(/images/hero.jpeg);
+  background-image: url(images/hero.jpeg);
   background-size: cover;
   background-position: bottom;
 }
