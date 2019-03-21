@@ -250,8 +250,7 @@ h3 {
 }
 
 .hero-image {
-  background-image: url(/images/hero.jpeg);
-  /* background-image: url(https://github.com/EmilyHLane/shoe-insights-frontend/blob/master/images/hero.jpeg); */
+  background-image: url(images/hero.jpeg);
   background-size: cover;
   background-position: bottom;
 }
